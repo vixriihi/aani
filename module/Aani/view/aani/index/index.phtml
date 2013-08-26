@@ -1,0 +1,44 @@
+<?php
+$this->headScript()
+        ->appendFile($this->basePath() . '/js/mustache.js')
+        ->appendFile($this->basePath() . '/js/app.js')
+?>
+<div id="messages"></div>
+<div id="view"></div>
+<div id="templates" style="display: none;">
+    <div id="messagesTpl">
+        <div class="alert alert-{{level}}" id="not_supported">
+            {{#closable}}
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{/closable}}    
+            {{msg}}
+        </div>        
+    </div>
+    <div id="voiceTpl">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 id="navbar">{{title}}</h1>
+                <div class="progress progress-striped active">
+                    <div class="progress-bar" style="width: 45%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <p>{{question}}</p>
+            </div>
+            <div class="col-lg-4">
+                <h3>My answer</h3>
+
+                <div class="list-group">
+                    {{#answers}}
+                    <a href="#" class="list-group-item answer" id="{{id}}">
+                        <p class="list-group-item-text">{{answer}}</p>
+                    </a>
+                    {{/answers}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

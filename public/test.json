@@ -1,0 +1,21 @@
+{
+   "id":"2",
+   "title":"Question title",
+   "question":"Question content",
+   "answers":[
+      {
+         "id":1,
+         "answer":"Vastaus vaihtoehto 1"
+      },
+      {
+         "id":2,
+         "answer":"Vastaus vaihtoehto 2"
+      },
+      {
+         "id":3,
+         "answer":"Vastaus vaihtoehto 3"
+      }
+   ],
+   "timeleft":30,
+   "currenttime":12345
+}
